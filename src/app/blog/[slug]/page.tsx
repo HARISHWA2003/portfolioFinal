@@ -5,15 +5,15 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
-// Function to generate static parameters
-export async function generateStaticParams() {
-  // // Fetch all posts to get the list of slugs
-  // const posts = await getAllPosts(); // Fetch all posts or their slugs
-  // // Map over posts to return the parameters for dynamic routes
-  // return posts.map((post: { slug: string }) => ({
-  //   slug: post.slug,
-  // }));
-}
+// // Function to generate static parameters
+// export async function generateStaticParams() {
+//   // // Fetch all posts to get the list of slugs
+//   // const posts = await getAllPosts(); // Fetch all posts or their slugs
+//   // // Map over posts to return the parameters for dynamic routes
+//   // return posts.map((post: { slug: string }) => ({
+//   //   slug: post.slug,
+//   // }));
+// }
 
 export async function generateMetadata({
   params,
