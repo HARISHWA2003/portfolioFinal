@@ -106,7 +106,7 @@ export const ResumeCard = ({
                   <li key={index} className="mt-2">
                     <div className="h-fit w-full flex flex-row">
                       <div className="mr-1">• </div>
-                      <div>{point}</div>
+                      <div className="text-[#a3a3a3]">{point}</div>
                     </div>
                     {/* {point} */}
                   </li>
