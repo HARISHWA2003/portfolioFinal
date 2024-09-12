@@ -100,7 +100,18 @@ export const ResumeCard = ({
               }}
               className="mt-2 text-xs sm:text-sm"
             >
-              {description}
+              {/* {description} */}
+              <ul>
+                {description.split("\n").map((point, index) => (
+                  <li key={index} className="mt-2">
+                    <div className="h-fit w-full flex flex-row">
+                      <div className="mr-1">• </div>
+                      <div>{point}</div>
+                    </div>
+                    {/* {point} */}
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           )}
         </div>

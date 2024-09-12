@@ -41,7 +41,16 @@ export function HackathonCard({
         )}
         {description && (
           <span className="prose dark:prose-invert text-sm text-muted-foreground">
-            {description}
+            {/* {description} */}
+            <ul>
+              {description.split("\n").map((point, index) => (
+                <li key={index} className="mt-2">
+                  <div className="h-fit w-full flex flex-row">
+                    <div>{point}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </span>
         )}
       </div>
