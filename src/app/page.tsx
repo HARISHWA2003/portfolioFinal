@@ -92,6 +92,8 @@ export default function Page() {
                 title={education.school}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
+                description={education.description}
+                // gpa={education.gpa}
               />
             </BlurFade>
           ))}

@@ -8,10 +8,10 @@ export const DATA = {
   location: "Bangalore, India",
   locationLink: "",
   description:
-    "Student with a passion for exploring the latest in machine learning and data science. I love building innovative projects and sharing my learning journey. Constantly curious and eager to make an impact.",
+    " Computer Science graduate passionate about building real-world AI systems. I work on machine learning, generative models, and intelligent systems with a focus on creativity, impact, and continuous learning.",
   summary:
     "In 2021, [I began my academic journey in Artificial Intelligence](/#education), focusing on advanced topics in machine learning, data science, and emerging technologies. Throughout my studies, [I have engaged in numerous AI projects](/#projects), [participated in competitive challenges](/#hackathons), and explored practical applications of AI to address complex problems. I am dedicated to deepening my expertise in AI and contributing to the field through continuous learning, collaboration, and innovation.",
-  avatarUrl: "/me.png",
+  avatarUrl: "/pfp.jpg",
   skills: [
     "AI/ML",
     "PyTorch",
@@ -34,8 +34,8 @@ export const DATA = {
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "harishwadreddy@gmail.com",
+    tel: "+917022277237",
     social: {
       GitHub: {
         name: "GitHub",
@@ -83,9 +83,9 @@ export const DATA = {
       title: "Technical Intern",
       logoUrl: "/datacouch.png",
       start: "Nov 2023",
-      end: "Present",
+      end: "Nov 2024",
       description:
-        "Developed and validated machine learning models, including a Retrieval-Augmented Generation (RAG) based Large Language Model (LLM), using TensorFlow and PyTorch. \n Conducted data preprocessing and analysis with Apache HUDI and PySpark, ensuring data quality and efficient handling of large datasets. \n Implemented voice cloning projects to create Indian accents for module recordings, utilizing advanced speech synthesis techniques.",
+        "Developed and optimized RAG-based language models using TensorFlow and PyTorch, improving inference efficiency by 13%. \n Created enterprise chatbot leveraging LLaMA and RAG, automating over 1000 interactions/month.\n Built predictive models for real-world data using Azure ML, AI Studio, and Databricks with 80-85% accuracy. \n  Engineered end-to-end ML pipelines with reduced latency and efficient deployment using MLOps principles.",
     },
     {
       company: "Bennett University",
@@ -97,17 +97,20 @@ export const DATA = {
       start: "Jan 2023",
       end: "May 2023",
       description:
-        "Developed a data loader to efficiently feed training and validation data into the Convolutional Neural Network (CNN) model. \n Implemented a single image prediction module, tailored to the specific requirements of our CNN architecture, which was not readily available",
+        "Designed a high-performance data loader for CNNs, reducing training time by 8%. \n Implemented a single-image prediction module using CNNs, achieving a 15% improvement in top-5 accuracy on ImageNet",
     },
   ],
   education: [
     {
-      school: "Will Attend Soon",
-      href: "",
-      degree: "",
-      logoUrl: "",
-      start: "",
-      end: "",
+      school: "National Taiwan University",
+      href: "https://www.ntu.edu.tw/english/",
+      degree: "Semester Exchange",
+      logoUrl: "/NTUlogo.jpg",
+      start: "Feb 25",
+      end: "Jun 25",
+      description:
+        "Studied advanced topics in AI, machine learning, and data systems through rigorous coursework and practical assignments.\nCollaborated with international peers on team-based projects, enhancing both technical and cross-cultural skills.\nEngaged with a new culture, built lasting friendships, and broadened my perspective beyond the classroom.",
+      // gpa: "p",
     },
     {
       school: "Bennett Universtiy",
@@ -116,6 +119,9 @@ export const DATA = {
       logoUrl: "/bennett.jpg",
       start: "2021",
       end: "2025",
+      description:
+        "Completed a Bachelor’s degree in Computer Science with a strong focus on AI, machine learning, and systems programming.\nGraduated with a GPA of 8.89/10, consistently ranking among the top performers in core technical courses.\nActively participated in projects, research work, and hackathons that strengthened both theoretical knowledge and practical skills.",
+      // gpa: "8.89",
     },
   ],
   projects: [
