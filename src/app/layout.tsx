@@ -1,29 +1,48 @@
-import Navbar from "@/components/navbar";
-import { ThemeProvider } from "@/components/theme-provider";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { IBM_Plex_Mono, Space_Grotesk, Unbounded } from "next/font/google";
 import "./globals.css";
 
-const fontSans = FontSans({
+const fontSans = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
+});
+
+const fontMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "500", "600"],
+});
+
+const fontDisplay = Unbounded({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["700", "800", "900"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: `${DATA.name} — ${DATA.tagline}`,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  keywords: [
+    "Software Engineer",
+    "Backend Engineer",
+    "Data Architecture",
+    "LLM Engineer",
+    "Freelance Developer",
+    "Bangalore",
+    DATA.name,
+  ],
   openGraph: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} — ${DATA.tagline}`,
     description: DATA.description,
     url: DATA.url,
-    siteName: `${DATA.name}`,
+    siteName: DATA.name,
     locale: "en_US",
     type: "website",
   },
@@ -39,12 +58,8 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} — ${DATA.tagline}`,
     card: "summary_large_image",
-  },
-  verification: {
-    google: "",
-    yandex: "",
   },
 };
 
@@ -54,19 +69,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
+          "min-h-screen bg-void font-sans text-chrome antialiased",
+          fontSans.variable,
+          fontMono.variable,
+          fontDisplay.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark">
-          <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
-          </TooltipProvider>
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );
